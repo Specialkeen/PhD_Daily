@@ -1,0 +1,14 @@
+Image reconstruction in CT is done using projection data. Filtered back projection (FBP) algorithms produce high-quality images when the projection data are sufficiently complete. 
+However, some applications like the reduction of the scan time, decrease of the X-ray radiation which may expose patients to other health risks, scanning of some long objects with limited angular range, may result in incomplete projection data and therefore FBP algorithms may not be appropriate. 
+Also, iterative methods like total variation (TV)-based methods produce good quality reconstructions from incomplete projection data but some artifacts appear on the edges of the reconstructed image when the projection data are acquired from the limited-angle CT, 
+in addition to staircase effects or blocky artifacts that may appear in the reconstructed image. Currently, deep learning approaches have been used to address those challenges [56].
+Deep learning frameworks for image reconstruction in CT include DEAR [57], PYRO-NN [58], LEARN [59], Improved GoogLeNet [60], among others. Also, several other studies report accurate image reconstructions when compared to the existing traditional approaches [61]. 
+These deep learning approaches have been used in two-dimensional (2D) and three-dimensional (3D) reconstructions, effective in reducing noise, enhancing the spatial resolution, and perform faster on graphical processing units (GPUs). The summary of some of the articles reviewed is given in Table 3 below.
+
+[56]	An image reconstruction framework based on U-net. It is superior to noise and angle artifacts while preserving the image structures but it is computationally expensive and requires large training datasets.
+[57]	A framework called DEAR for 3D CT image reconstruction from few-view data. However, more experiments to optimize and validate the DEAR-3D network are required.
+[58]	A framework based on Tensorflow for iterative reconstructions with data from real CT systems. The limitation is that it requires graphical processing units (GPUs).
+[59]	A framework called LEARN for CT reconstruction. It improves both image quality and computational efficiency. There is still a need to optimize the framework for clinical applications.
+[60]	An Improved GoogLeNet for removing streak artifacts in sparse-view CT reconstruction. The method is effective in reducing the artifacts and preserving the quality of the reconstructed image.
+[62]	A deep learning framework for high-quality reconstructions in CT. The framework can differentiate and remove noise from the input signal.
+
